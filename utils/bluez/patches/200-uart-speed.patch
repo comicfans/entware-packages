@@ -1,6 +1,6 @@
---- a/tools/hciattach.c
-+++ b/tools/hciattach.c
-@@ -101,20 +101,37 @@ int uart_speed(int s)
+--- a/src/shared/tty.h
++++ b/src/shared/tty.h
+@@ -40,20 +40,37 @@
  		return B230400;
  	case 460800:
  		return B460800;

@@ -8,12 +8,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=bluez
-PKG_VERSION:=5.38
+PKG_VERSION:=5.44
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL:=@KERNEL/linux/bluetooth/
-PKG_MD5SUM:=dae2ed00c63791800ea7d10a381270a5
+PKG_MD5SUM:=94273617129ced06612fcb9f5273d14c
+            
 
 PKG_LICENSE:=GPL-2.0+
 PKG_LICENSE_FILES:=COPYING
@@ -72,6 +73,7 @@ define Package/bluez-daemon/conffiles
 /opt/etc/bluetooth/input.conf
 /opt/etc/bluetooth/proximity.conf
 /opt/etc/config/bluetooth
+/opt/etc/dbus-1/system.d/bluetooth.conf
 endef
 
 CONFIGURE_ARGS += \
