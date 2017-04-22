@@ -31,7 +31,7 @@ define Package/pulseaudio/Default
   SECTION:=sound
   CATEGORY:=Sound
   DEPENDS:=+libspeexdsp +libsndfile +libltdl +libpthread \
-	+librt +alsa-lib +libopenssl +libwrap +libcap $(ICONV_DEPENDS) $(INTL_DEPENDS)
+	+librt +alsa-lib +libdbus +libsbc +libopenssl +libwrap +libcap $(ICONV_DEPENDS) $(INTL_DEPENDS)
   TITLE:=Network sound server
   MAINTAINER:=Peter Wagner <tripolar@gmx.at>
   URL:=http://www.pulseaudio.org
@@ -94,11 +94,11 @@ CONFIGURE_ARGS += \
 	--disable-jack \
 	--disable-asyncns \
 	--disable-lirc \
-	--disable-bluez \
+	--enable-bluez \
 	--disable-udev \
 	--without-fftw \
 	--disable-avahi \
-	--disable-dbus \
+	--enable-dbus \
 	--without-soxr
 
 CONFIGURE_VARS += \
